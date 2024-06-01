@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clean and Professional HTML CSS Modal</title>
+    <link rel="stylesheet" href="modal.css" />
+  </head>
+  <body>
+    <button
+      onclick="document.getElementById('modalContain').classList.add('active')"
+    >
+      Open Modal
+    </button>
+
+    <div id="modalContain" class="modal">
+      <div class="modal-content">
+        <h2>Hi Thầy</h2>
+        <button
+          onclick="document.getElementById('modalContain').classList.remove('active')"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
