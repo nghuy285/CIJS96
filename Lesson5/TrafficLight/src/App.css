@@ -1,0 +1,41 @@
+.contain {
+  width: 150px;
+  height: 300px;
+  padding: 20px;
+  padding-bottom: 70px;
+  background-color: black;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+.contain .red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 90%;
+}
+.contain .yellow {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 90%;
+}
+.contain .green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  border-radius: 90%;
+}
+.contain .off {
+  background-color: grey;
+  width: 100px;
+  height: 100px;
+  border-radius: 90%;
+}
+.changeColor {
+  border-radius: 10px;
+  margin-top: 30px;
+  padding: 10px 50px;
+}
