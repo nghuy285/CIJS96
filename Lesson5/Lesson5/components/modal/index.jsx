@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./modal.css";
 
 const Modal = (props) => {
+  const [updatedPokemon, setUpdatedPokemon] = useState({
+    id: props.id,
+    name: props.name,
+    types: props.type,
+    image: props.img,
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setUpdatedPokemon((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSave = () => {
+    props.onSave(updatedPokemon);
+  };
+
   return (
     <div className="modal">
       <div className="modal-content">
@@ -9,26 +28,23 @@ const Modal = (props) => {
           &times;
         </span>
         <div className="contain">
-          <img src={props.img} alt="" />
+          <img src={props.img} alt={updatedPokemon.name} />
           <span>
             <p>ID:</p>
-            <input type="text" value={props.id} />
+            <input type="text" name="id" value={updatedPokemon.id} />
           </span>
-
-          <br></br>
+          <br />
           <span>
-            {" "}
             <p>Tên Pokemon:</p>
-            <input type="text" value={props.name} />
+            <input
+              type="text"
+              name="name"
+              value={updatedPokemon.name}
+              onChange={handleInputChange}
+            />
           </span>
 
-          <div className="class" id="type">
-            {props.type.map((type, index) => (
-              <span key={index} className={type}>
-                {type}
-              </span>
-            ))}
-          </div>
+          <button onClick={handleSave}>Save</button>
         </div>
       </div>
     </div>

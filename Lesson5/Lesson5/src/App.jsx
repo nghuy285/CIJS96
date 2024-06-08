@@ -57,11 +57,21 @@ function App() {
     setCurrentPokemon(null);
   };
 
+  const savePokemon = (updatedPokemon) => {
+    setPokemons((prevPokemons) =>
+      prevPokemons.map((pokemon) =>
+        pokemon.id === updatedPokemon.id ? updatedPokemon : pokemon
+      )
+    );
+    closeModal();
+  };
+
   return (
     <>
       <div className="Pcard">
         {pokemons.map((pokemon) => (
           <PokemonCard
+            key={pokemon.id}
             id={pokemon.id}
             name={pokemon.name}
             type={pokemon.types}
@@ -77,9 +87,11 @@ function App() {
           img={currentPokemon.image}
           type={currentPokemon.types}
           onClose={closeModal}
+          onSave={savePokemon}
         />
       )}
     </>
   );
 }
+
 export default App;
