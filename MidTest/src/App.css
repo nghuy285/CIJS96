@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins);
+body {
+  background-color: #192026;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.movie-list {
+  position: relative;
+  display: grid;
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  width: 1550px;
+}
+#carousel {
+  position: relative;
+  width: 1300px;
+  max-height: 400px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  margin: 0;
+}
+.selected-movie {
+  position: relative;
+}
+
+.selected-movie img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.selected-movie::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 71%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
+  z-index: 1;
+}
+
+.selected-movie .detail {
+  position: relative;
+  z-index: 2;
+  color: white;
+  width: 800px;
+  padding: 0px;
+}
+
+.release {
+  position: relative;
+  width: 1500px;
+  left: 15%;
+  margin: 0;
+}
+.explore {
+  position: relative;
+  width: 1500px;
+
+  left: 15%;
+  height: 550px;
+}
+.detail {
+  position: relative;
+  width: 1200px;
+  left: 40px;
+  bottom: 220px;
+}
