@@ -72,13 +72,13 @@ function App() {
         {selectedMovieId && (
           <div className="selected-movie">
             <img
-              src={data.data[selectedMovieId - 1].image}
+              src={movies[selectedMovieId - 1].image}
               id="carousel"
               alt="Selected Movie"
             ></img>
             <div className="detail">
-              <h3>{data.data[selectedMovieId - 1].movieName}</h3>
-              <p>{data.data[selectedMovieId - 1].description}</p>
+              <h3>{movies[selectedMovieId - 1].movieName}</h3>
+              <p>{movies[selectedMovieId - 1].description}</p>
             </div>
           </div>
         )}
