@@ -1,0 +1,50 @@
+.containNav {
+  display: flex;
+  position: relative;
+  left: 5%;
+  border-radius: 13px;
+  top: 20px;
+  height: 5vh;
+  width: 90vw;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  padding: 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  gap: 1.8rem;
+}
+
+.containNav div {
+  gap: 1rem;
+  display: flex;
+}
+
+.containNav .rightNav {
+  position: relative;
+  right: 1.3rem;
+  top: 0.8rem;
+}
+
+.containNav .midNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.containNav .logoPDP img {
+  position: relative;
+  left: 1.8rem;
+  top: 5px;
+  width: 100px;
+  height: 35px;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+.link:hover {
+  border-bottom: solid black 2px;
+}

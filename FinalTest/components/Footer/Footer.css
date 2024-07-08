@@ -1,0 +1,30 @@
+.helpAll {
+  position: relative;
+  height: 500px;
+  padding-top: 3%;
+  width: 99vw;
+  background: linear-gradient(to right, #66e891, #cf71e4, pink, #66e891);
+}
+
+.helpAll h1 {
+  display: flex;
+  justify-content: center;
+}
+.helpContain {
+  display: flex;
+  position: relative;
+  left: 45%;
+  width: fit-content;
+  gap: 1.8rem;
+  text-align: center;
+}
+.helpContain div:hover {
+  opacity: 0.5;
+}
+.info {
+  position: relative;
+  width: fit-content;
+  left: 20%;
+  display: flex;
+  gap: 20rem;
+}

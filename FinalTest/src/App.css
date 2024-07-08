@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: "Saira", sans-serif;
+}
+
+.show1 {
+  margin-top: 48px;
+}
+.app {
+  font-family: Arial, sans-serif;
+}
+
+.product-listApp {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  flex: 1;
+  max-width: 250px;
+  margin: 20px;
+}
+.collection {
+  position: relative;
+  height: 40rem;
+}
+.gradientText {
+  background: linear-gradient(
+    90deg,
+    rgb(204, 96, 204),
+    rgb(87, 236, 124),
+    rgb(53, 53, 241)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  font-size: 50px;
+  width: fit-content;
+  left: 10%;
+}

@@ -1,0 +1,28 @@
+.infoShop {
+  position: relative;
+  top: 5rem;
+  color: white;
+}
+
+.infoShop .textShopAll {
+  position: absolute;
+  left: 15%;
+  top: 10rem;
+}
+.infoShop .textShopAll p {
+  width: 70%;
+}
+.infoShop .textShopAll h1 {
+  font-size: 50px;
+}
+.infoShop img {
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+  width: 80vw;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.listProduct {
+  display: flex;
+}

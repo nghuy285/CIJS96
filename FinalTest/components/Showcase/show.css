@@ -1,0 +1,142 @@
+.grid-container {
+  display: grid;
+  width: 89vw;
+  position: relative;
+  left: 5%;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.item1 {
+  height: 300px;
+  grid-column-start: 1;
+  position: relative;
+  grid-column-end: 3;
+}
+.item1 img {
+  border-radius: 15px;
+  height: 40rem;
+  width: 70rem;
+}
+#btnShop1 {
+  top: 40%;
+  left: 1.8rem;
+}
+#btnShop2 {
+  top: 24%;
+  left: 1.8rem;
+}
+#btnShop3 {
+  top: 22%;
+  left: 1.8rem;
+}
+#btnShop4 {
+  top: 40%;
+  left: 1.8rem;
+}
+.btnShop {
+  position: absolute;
+  padding: 1% 2%;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 128, 128, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: solid white 1px;
+}
+
+.btnShop:hover {
+  background-color: #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 128, 128, 0.7);
+}
+
+.item1 h1 {
+  display: flex;
+  position: absolute;
+  color: white;
+  top: 5%;
+  left: 1.8rem;
+}
+
+.item1 p {
+  display: flex;
+  position: absolute;
+  color: white;
+  top: 20%;
+  left: 1.8rem;
+}
+.item2 {
+  position: relative;
+}
+.item2 img {
+  border-radius: 15px;
+  height: 40rem;
+  width: 33rem;
+}
+.item2 h1 {
+  display: flex;
+  position: absolute;
+  color: white;
+  top: 5%;
+  left: 1.8rem;
+}
+
+.item2 p {
+  display: flex;
+  position: absolute;
+  color: white;
+  top: 13%;
+  left: 1.8rem;
+}
+.item3 {
+  position: relative;
+}
+.item3 h1 {
+  display: flex;
+  position: absolute;
+  color: white;
+  top: 5%;
+  left: 1.8rem;
+}
+
+.item3 p {
+  display: flex;
+  position: absolute;
+  color: white;
+  top: 13%;
+  left: 1.8rem;
+}
+.item3 img {
+  border-radius: 15px;
+  height: 40rem;
+  width: 33rem;
+}
+.item4 img {
+  border-radius: 15px;
+  height: 40rem;
+  width: 70rem;
+}
+.item4 {
+  height: 300px;
+  position: relative;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+.item4 h1 {
+  display: flex;
+  position: absolute;
+  color: white;
+  top: 5%;
+  left: 1.8rem;
+}
+
+.item4 p {
+  display: flex;
+  position: absolute;
+  color: white;
+  top: 20%;
+  left: 1.8rem;
+}

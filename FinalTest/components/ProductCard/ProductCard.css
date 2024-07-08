@@ -1,0 +1,38 @@
+.product-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star {
+  color: lightgray;
+  margin-right: 2px;
+}
+
+.star.filled {
+  color: gold;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  color: #333;
+}

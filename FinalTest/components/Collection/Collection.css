@@ -1,0 +1,33 @@
+.collection .background {
+  position: absolute;
+  border-radius: 40px;
+  left: 10%;
+  width: 80vw;
+  height: 60vh;
+}
+.collection {
+  position: relative;
+}
+.collectionCard {
+  background-color: white;
+  position: absolute;
+  left: 12%;
+  top: 5.5rem;
+  border-radius: 40px;
+  width: 400px;
+  height: 400px;
+}
+.collectionCard img {
+  position: absolute;
+  left: 40%;
+}
+.collectionCard p {
+  text-align: center;
+  position: absolute;
+  bottom: 10%;
+}
+#product {
+  width: 250px;
+  left: 20%;
+  top: 10%;
+}
