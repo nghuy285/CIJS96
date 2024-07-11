@@ -1,0 +1,16 @@
+.inputBtn {
+  position: relative;
+  height: 55px;
+  width: 100px;
+  margin-left: 5%;
+}
+.deleleBtn {
+  position: absolute;
+  right: 0;
+}
+.formCheck {
+  width: 600px;
+}
+input[type="checkbox"] {
+  accent-color: blue;
+}
