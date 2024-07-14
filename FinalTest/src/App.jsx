@@ -8,6 +8,7 @@ import Collection from "../components/Collection/Collection";
 import Footer from "../components/Footer/Footer";
 import { ProductContext } from "../components/ProductContext/ProductContext";
 import { Carousel } from "antd";
+import { Outlet } from "react-router-dom";
 function App() {
   const { products } = useContext(ProductContext);
   const [activeTab, setActiveTab] = useState("New");
@@ -32,6 +33,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
+      <Outlet />
       <div className="show1">
         <Show></Show>
       </div>

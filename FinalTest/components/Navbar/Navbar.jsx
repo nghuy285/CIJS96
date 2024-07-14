@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import xbox from "./asset/xbox.svg";
 import nitendo from "./asset/nitendo.svg";
 import ps from "./asset/ps.svg";
@@ -9,8 +9,18 @@ import cart from "./asset/cart.svg";
 import pdpLogo from "./asset/PDP.png";
 import user from "./asset/user.svg";
 import "./navbar.css";
+import SearchBar from "../Search/SearchBar/SearchBar";
 
 const Navbar = () => {
+  // const [searchTerm, setSearchTerm] = useState("");
+  // const navigate = useNavigate();
+
+  // const handleSearch = (e) => {
+  //   e.preventDefault();
+  //   if (searchTerm.trim()) {
+  //     navigate(`/search?query=${searchTerm}`);
+  //   }
+  // };
   return (
     <>
       <div className="containNav">
@@ -59,10 +69,18 @@ const Navbar = () => {
             <img src={user} style={{ width: "1.8rem" }}></img>
           </Link>
 
-          <Link>
-            <img src={search} style={{ width: "1.8rem" }}></img>
-          </Link>
-
+          {/* <form className="search-form" onSubmit={handleSearch}>
+            <input
+              type="text"
+              placeholder="Search for products..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <button type="submit">
+              <img src={search} alt="Search" style={{ width: "1.8rem" }} />
+            </button>
+          </form> */}
+          <SearchBar></SearchBar>
           <Link>
             <img src={cart} style={{ width: "1.8rem" }}></img>
           </Link>

@@ -1,0 +1,10 @@
+.inputSearch {
+  border-radius: 30px;
+  padding: 10px;
+  position: relative;
+  bottom: 9px;
+}
+.buttonSearch {
+  border: none;
+  background-color: white;
+}

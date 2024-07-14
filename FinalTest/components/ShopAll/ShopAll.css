@@ -26,3 +26,21 @@
 .listProduct {
   display: flex;
 }
+.products-listShopAll {
+  display: flex;
+  width: fit-content;
+  position: relative;
+  right: 10rem;
+}
+.randomProduct {
+  position: relative;
+  display: flex;
+  top: 50rem;
+  left: 13rem;
+  width: fit-content;
+  border-top: solid black 1px;
+}
+.EndShopAll {
+  position: relative;
+  top: 55rem;
+}

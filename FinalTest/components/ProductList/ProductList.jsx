@@ -1,36 +1,36 @@
 import React, { useEffect } from "react";
 import "./ProductList.css";
 import ProductCard from "../ProductCard/ProductCard";
-import { useContext, useState } from "react";
-import { ProductContext } from "../ProductContext/ProductContext";
-function ProductList(props) {
-  const { products } = useContext(ProductContext);
-  const [sortOption, setSortOption] = useState("featured");
-  const [filteredProducts, setFilteredProducts] = useState([]);
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
+const ProductList = ({ filteredProducts }) => {
+  const [sortOption, setSortOption] = useState("featured");
+  const [sortedProducts, setSortedProducts] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
-    let filtered =
-      props.shop === "all"
-        ? [...products]
-        : products.filter((product) => product.brand === props.shop);
+    let sorted = [...filteredProducts];
 
     if (sortOption === "price") {
-      filtered.sort((a, b) => a.price - b.price);
+      sorted.sort((a, b) => a.price - b.price);
     } else if (sortOption === "featured") {
-      filtered.sort((a, b) => b.rating - a.rating);
+      sorted.sort((a, b) => b.rating - a.rating);
     }
 
-    setFilteredProducts(filtered);
-  }, [products, props.shop, sortOption]);
+    setSortedProducts(sorted);
+  }, [filteredProducts, sortOption]);
 
   const handleSortChange = (e) => {
     setSortOption(e.target.value);
+  };
+  const handleProductClick = (productId) => {
+    navigate(`/product/${productId}`);
   };
   return (
     <div className="product-list">
       <div className="textProduct">
         <div className="product-count">
-          Showing {filteredProducts.length} products
+          Showing {sortedProducts.length} products
         </div>
         <div className="sort-by">
           <span>Sort By </span>
@@ -42,18 +42,23 @@ function ProductList(props) {
       </div>
 
       <div className="products">
-        {filteredProducts.map((product) => (
-          <ProductCard
+        {sortedProducts.map((product) => (
+          <div
             key={product.id}
-            image={product.image}
-            title={product.title}
-            rating={product.rating}
-            price={product.price}
-          />
+            onClick={() => handleProductClick(product.id)}
+            style={{ cursor: "pointer" }}
+          >
+            <ProductCard
+              image={product.image}
+              title={product.title}
+              rating={product.rating}
+              price={product.price}
+            />
+          </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default ProductList;
