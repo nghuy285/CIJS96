@@ -62,7 +62,32 @@ const Checkout = () => {
     );
     setTotal(totalPrice);
   };
+  const handleIncreaseQuantity = (index) => {
+    const updatedCart = cart.map((item, i) =>
+      i === index ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    const totalPrice = updatedCart.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+    setTotal(totalPrice);
+  };
 
+  const handleDecreaseQuantity = (index) => {
+    const updatedCart = [...cart];
+    if (updatedCart[index].quantity > 1) {
+      updatedCart[index].quantity -= 1;
+      setCart(updatedCart);
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      const totalPrice = updatedCart.reduce(
+        (sum, item) => sum + item.price * item.quantity,
+        0
+      );
+      setTotal(totalPrice);
+    }
+  };
   return (
     <>
       <Navbar />
@@ -86,6 +111,22 @@ const Checkout = () => {
                       onClick={() => handleRemoveItem(index)}
                     >
                       Remove
+                    </Button>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      style={{ marginLeft: "1.8rem" }}
+                      onClick={() => handleDecreaseQuantity(index)}
+                    >
+                      -
+                    </Button>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      style={{ marginLeft: "1rem" }}
+                      onClick={() => handleIncreaseQuantity(index)}
+                    >
+                      +
                     </Button>
                   </div>
                 </div>
