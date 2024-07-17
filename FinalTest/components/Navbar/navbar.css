@@ -1,6 +1,6 @@
 .containNav {
   display: flex;
-  position: relative;
+  position: sticky;
   left: 5%;
   border-radius: 13px;
   top: 20px;
@@ -13,6 +13,7 @@
   padding: 10px 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   gap: 1.8rem;
+  z-index: 100;
 }
 
 .containNav div {

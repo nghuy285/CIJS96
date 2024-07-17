@@ -1,0 +1,44 @@
+.product-detail {
+  display: flex;
+  position: relative;
+  top: 1.8rem;
+  gap: 20rem;
+}
+.infoDetail {
+  max-width: 40rem;
+}
+.product-detail img {
+  width: 40rem;
+  position: relative;
+  left: 5%;
+  object-fit: contain;
+}
+.listShopDetail {
+  display: flex;
+  width: fit-content;
+  position: relative;
+  margin-left: 00rem;
+}
+
+.randomProductDetail {
+  position: relative;
+  display: flex;
+  top: 5rem;
+  left: 20rem;
+  width: fit-content;
+  border-top: solid black 1px;
+}
+.btnBuy {
+  display: flex;
+  gap: 4rem;
+  justify-content: flex-end;
+  position: relative;
+}
+.btnBuy Button {
+  width: 300px;
+}
+.ratingDetail {
+  position: relative;
+  left: 60%;
+  bottom: 1.8rem;
+}

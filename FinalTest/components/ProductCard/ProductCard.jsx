@@ -12,7 +12,7 @@ function ProductCard({ image, title, rating, price }) {
               ★
             </span>
           ))}
-          <span className="rating">{rating}</span>
+          <span className="rating">{rating.toFixed(1)}</span>
         </div>
         <h2 className="product-title">{title}</h2>
         <p className="product-price">${price}</p>

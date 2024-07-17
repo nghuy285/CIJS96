@@ -7,7 +7,7 @@ import "./ShopAll.css";
 import Navbar from "../Navbar/Navbar";
 import ProductList from "../ProductList/ProductList";
 import FilterBar from "../FilterBar/FilterBar";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { ProductContext } from "../ProductContext/ProductContext";
 import ProductCard from "../ProductCard/ProductCard";
 import Footer from "../Footer/Footer";
@@ -41,7 +41,7 @@ const ShopAll = () => {
       "Unique. Colorful. Innovative. Shop our controllers, headsets, & chargers designed for PlayStation.",
     ],
   };
-
+  const navigate = useNavigate();
   const [shop, setShop] = useState("all");
   const [backgroundShop, setBackgroundShop] = useState(infoBackground.all);
   const [infoTextShop, setInfoTextShop] = useState(infoText.all);
@@ -52,7 +52,9 @@ const ShopAll = () => {
     color: [],
     productLine: [],
   });
-
+  const handleProductClick = (productId) => {
+    navigate(`/product/${productId}`);
+  };
   useEffect(() => {
     if (brand) {
       setShop(brand);
@@ -122,13 +124,18 @@ const ShopAll = () => {
         </h2>
         <div className="products-listShopAll">
           {randomProduct.map((product, index) => (
-            <ProductCard
-              key={index}
-              image={product.image}
-              title={product.title}
-              rating={product.rating}
-              price={product.price}
-            />
+            <div
+              onClick={() => handleProductClick(product.id)}
+              style={{ cursor: "pointer" }}
+            >
+              <ProductCard
+                key={index}
+                image={product.image}
+                title={product.title}
+                rating={product.rating}
+                price={product.price}
+              />
+            </div>
           ))}
         </div>
       </div>

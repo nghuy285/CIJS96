@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Form, Input, Button, message, Card } from "antd";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../UserContext/UserContext";
 import "./Auth.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
@@ -8,6 +9,7 @@ import Footer from "../Footer/Footer";
 const Login = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
+  const { loginUser } = useContext(UserContext);
 
   const onFinish = (values) => {
     const users = JSON.parse(localStorage.getItem("users")) || [];
@@ -16,8 +18,7 @@ const Login = () => {
         user.username === values.username && user.password === values.password
     );
     if (user) {
-      localStorage.setItem("user", JSON.stringify(user));
-      localStorage.setItem("isLogin", true);
+      loginUser(user);
       navigate("/");
     } else {
       message.error("Invalid username or password");

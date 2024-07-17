@@ -9,10 +9,14 @@ import Footer from "../components/Footer/Footer";
 import { ProductContext } from "../components/ProductContext/ProductContext";
 import { Carousel } from "antd";
 import { Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function App() {
   const { products } = useContext(ProductContext);
   const [activeTab, setActiveTab] = useState("New");
-
+  const navigate = useNavigate();
+  const handleProductClick = (productId) => {
+    navigate(`/product/${productId}`);
+  };
   useEffect(() => {
     const filteredProducts = products;
     if (activeTab === "New") {
@@ -41,13 +45,18 @@ function App() {
       <TabNavigation setActiveTab={setActiveTab} />
       <div className="product-listApp">
         {filteredProducts.map((product, index) => (
-          <ProductCard
-            key={index}
-            image={product.image}
-            title={product.title}
-            rating={product.rating}
-            price={product.price}
-          />
+          <div
+            onClick={() => handleProductClick(product.id)}
+            style={{ cursor: "pointer" }}
+          >
+            <ProductCard
+              key={index}
+              image={product.image}
+              title={product.title}
+              rating={product.rating}
+              price={product.price}
+            />
+          </div>
         ))}
       </div>
       <div className="collection">

@@ -83,6 +83,33 @@ const FilterBar = ({ filters, setFilters }) => {
           />
           Green
         </label>
+        <label>
+          <input
+            type="checkbox"
+            name="color"
+            value="pink"
+            onChange={handleFilterChange}
+          />
+          Pink
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="color"
+            value="yellow"
+            onChange={handleFilterChange}
+          />
+          Yellow
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="color"
+            value="purple"
+            onChange={handleFilterChange}
+          />
+          Purple
+        </label>
       </div>
 
       <div className="filter-group">
